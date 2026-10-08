@@ -1,0 +1,28 @@
+== 1. even h = 6..48: local circuit, pi, merged graph (base, aligned/support, aligned/star)
+OVERALL: PASS (no violation)
+== 2. h = 50, one process per mode (keeps RSS near 2 GB)
+  base/support: c=450394 q=58800 R=c+q=509194 compiledRoles=509194 merged=40256 pruned=0 dupSupports=0 starMismatch=0 ... => PASS
+OVERALL: PASS (no violation)
+  aligned/star: c=435450 q=58800 R=c+q=494250 compiledRoles=494250 merged=55200 pruned=0 dupSupports=0 starMismatch=0 ... => PASS
+OVERALL: PASS (no violation)
+  aligned/support: c=435450 q=58800 R=c+q=494250 compiledRoles=494250 merged=55200 pruned=0 dupSupports=0 starMismatch=0 ... => PASS
+OVERALL: PASS (no violation)
+== 3. negative control (must FAIL): star key with the fixed pair dropped, h = 8
+control failed as expected
+== 4. exact rational linear algebra on frames, h = 6, 8, 10
+LA OVERALL: PASS
+== 5. node-by-node comparison with the PR's Python graph (prs/2), h = 6..12 and 50
+12
+PR: additions=435450 distinct_add_supports=435450 outputs=58800 merged=55200
+ours: additions=435450 outputs=58800
+same set of node supports: True
+same decompositions (multiset of node, unordered children): True
+decompositions only in ours: 0  only in PR: 0
+same outputs (common, target) -> support: True
+== 6. the PR's own tests (second, non-independent signal)
+Ran 6 tests in 202.437s
+
+OK
+PASS conditional 17*2^-63; minimum 739738521/400000000000000000000000000
+Side roles: 494250
+== RUN_ALL: PASS

@@ -1,0 +1,5 @@
+S1/S2 physical order and counts: 0 errors
+S3 offsets read only declared controls (200 random runs): 0 errors
+S4 delta <= 5/(128 p^3) for p=2..200000 at K=G+4l+10, n=p: 0 errors; max delta/bound = 1 = 1.000000
+S5 segment geometry K<=40, f<=12, all rho: 0 errors
+S6 layout carving inequalities: 0 errors

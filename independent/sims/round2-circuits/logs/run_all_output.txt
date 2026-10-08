@@ -1,0 +1,99 @@
+== 0. pin heads (refs fetched as refs/remotes/prs/*)
+5015011bd9a655da038910171eee9f431f4590ff
+8c225e619168c0141dcfcba3b68a65bbed6a8729
+== PR6-1. even h = 8..30: supports, brute force (h<=16), roles, F_2 schedule incl. every basis vector, frames (combinatorial)
+OVERALL PASS
+== PR6-2. exact rational frames (Q^h, form I-J/9) at h = 8, 10, 12, plus three-stage exchange with shared banks (h = 8, 10)
+OVERALL PASS
+OVERALL PASS
+== PR6-3. h = 36, 40, 44, 48 (combinatorial frames)
+OVERALL PASS
+== PR6-4. claimed size h = 50
+OVERALL PASS
+== PR6-5. negative controls (each must FAIL)
+  control swap_output rejected
+  control center_from_partial rejected
+  control overlap_addition rejected
+  control drop_center rejected
+  control J_before_R0 rejected
+  control stage2_uncomplemented rejected
+== PR4-1. counts, totals, exact (R+J)LV = I at h = 8..14 and the claimed h = 24
+{'h': 8, 'base_additions': 262, 'base_outputs': 616, 'additions': 344, 'new_ancestors': 82, 'side_outputs': 616, 'q': 624, 'roles': 968, 'roles_eq_C_plus_q': True, 'totals_exact': True, 'map_exact': True, 'map_fails': [], 'max_pass_coeff': '1', 'secs': 0.1}
+{'h': 10, 'base_additions': 1048, 'base_outputs': 1420, 'additions': 1116, 'new_ancestors': 68, 'side_outputs': 1420, 'q': 1430, 'roles': 2546, 'roles_eq_C_plus_q': True, 'totals_exact': True, 'map_exact': True, 'map_fails': [], 'max_pass_coeff': '1', 'secs': 0.2}
+{'h': 12, 'base_additions': 2780, 'base_outputs': 2640, 'additions': 2844, 'new_ancestors': 64, 'side_outputs': 2640, 'q': 2652, 'roles': 5496, 'roles_eq_C_plus_q': True, 'totals_exact': True, 'map_exact': True, 'map_fails': [], 'max_pass_coeff': '1', 'secs': 0.9}
+{'h': 14, 'base_additions': 6010, 'base_outputs': 4368, 'additions': 6082, 'new_ancestors': 72, 'side_outputs': 4368, 'q': 4382, 'roles': 10464, 'roles_eq_C_plus_q': True, 'totals_exact': True, 'map_exact': True, 'map_fails': [], 'max_pass_coeff': '1', 'secs': 2.7}
+{'h': 24, 'base_additions': 66518, 'base_outputs': 24288, 'additions': 66638, 'new_ancestors': 120, 'side_outputs': 24288, 'q': 24312, 'roles': 90950, 'roles_eq_C_plus_q': True, 'totals_exact': True, 'map_exact': True, 'map_fails': [], 'max_pass_coeff': '1', 'secs': 95.7}
+== PR4-2. F_2 frames/residuals (both factors), three stages, h = 8..14
+  RESULT PASS 0.4s
+  RESULT PASS 1.3s
+  RESULT PASS 3.8s
+  RESULT PASS 9.6s
+== PR4-3. F_2 frames at h = 24 (~10-20 min)
+  RESULT PASS 196.9s
+== PR4-4. exact dyadic scalar runs, dirty scratch, basis vectors, three-stage exchange with shared banks
+h 8 single {'forward': {'target': True, 'source': True, 'scratch': True, 'centers': True}, 'inverse': {'target': True, 'source': True, 'scratch': True, 'centers': True}, 'basis': True} max pass coeff 1 0.1s
+   three-stage shared {'exchange': True, 'restored': True, 'join_values': True} 0.9s
+h 10 single {'forward': {'target': True, 'source': True, 'scratch': True, 'centers': True}, 'inverse': {'target': True, 'source': True, 'scratch': True, 'centers': True}, 'basis': True} max pass coeff 1 0.3s
+   three-stage shared {'exchange': True, 'restored': True, 'join_values': True} 10.1s
+h 24 single {'forward': {'target': True, 'source': True, 'scratch': True, 'centers': True}, 'inverse': {'target': True, 'source': True, 'scratch': True, 'centers': True}} max pass coeff 1 8.2s
+== PR4-5. tensor-level frames on F^(x)3 at h = 8 (~7 min)
+ interstage [(1, True, True), (2, True, True), ('X source = U_a', True, True), ('Y source = 0', True, True), ('X sink = full', True, True), ('Y sink = U_a^perp', True, True)]
+  stage 1: fails 0 residuals 2164 onb-built 488 dec 8 loss 57 sum|d| 496514 (0.4s)
+  stage 2: fails 0 residuals 2500 onb-built 575 dec 8 loss 57 sum|d| 502002 (3.9s)
+  stage 3: fails 0 residuals 2164 onb-built 514 dec 8 loss 57 sum|d| 545906 (298.7s)
+== PR4-6. phase identity on every residual pair (h = 8); stage-1/3 sharing
+h 8 distinct residual pairs 3681 phase identity holds on 3681 PASS 6.9s
+pi combinatorics h 6 {'bijection': True, 'intersections': [0, 2], 'even': True}
+pi combinatorics h 8 {'bijection': True, 'intersections': [0, 2], 'even': True}
+pi combinatorics h 10 {'bijection': True, 'intersections': [0, 2], 'even': True}
+pi combinatorics h 24 {'bijection': True, 'intersections': [0, 2], 'even': True}
+join h6 pairs 28 ok True 13.9s
+endpoint frames h 8 aux roles 968 bad 0
+endpoint frames h 24 aux roles 90950 bad 0
+== PR4-7. negative controls
+CONTROLS PASS
+== ARITH. exact counts, deficits, savings and windows
+ARITH PASS
+== OWN. scratch checkouts and the PRs' own tests / generators
+tail: option used in invalid context -- 3
+== OWN-2. node-by-node comparison and our verifier on the PRs' graphs
+logs/compare.log:  same node supports True only PR 0 only ours 0
+logs/compare.log:  same decompositions True only PR 0 only ours 0
+logs/compare.log:  same outputs True same centers True
+logs/compare.log:COMPARE MATCH
+logs/compare.log:  same node supports True only PR 0 only ours 0
+logs/compare.log:  same decompositions True only PR 0 only ours 0
+logs/compare.log:  same outputs True same centers True
+logs/compare.log:COMPARE MATCH
+logs/compare.log:  same node supports True only PR 0 only ours 0
+logs/compare.log:  same decompositions True only PR 0 only ours 0
+logs/compare.log:  same outputs True same centers True
+logs/compare.log:COMPARE MATCH
+logs/compare.log:  same node supports True only PR 0 only ours 0
+logs/compare.log:  same decompositions True only PR 0 only ours 0
+logs/compare.log:  same outputs True same centers True
+logs/compare.log:COMPARE MATCH
+logs/compare.log:  same node supports False only PR 8 only ours 8
+logs/compare.log:  same decompositions False only PR 16 only ours 16
+logs/compare.log:  same outputs (target, sign, multiset of supports) True
+logs/compare.log:COMPARE DIFFER
+logs/compare.log:  same node supports False only PR 10 only ours 10
+logs/compare.log:  same decompositions False only PR 20 only ours 20
+logs/compare.log:  same outputs (target, sign, multiset of supports) True
+logs/compare.log:COMPARE DIFFER
+logs/compare.log:  same node supports False only PR 14 only ours 14
+logs/compare.log:  same decompositions False only PR 28 only ours 28
+logs/compare.log:  same outputs (target, sign, multiset of supports) True
+logs/compare.log:COMPARE DIFFER
+logs/compare.log:  same node supports False only PR 626 only ours 626
+logs/compare.log:  same decompositions False only PR 1252 only ours 1252
+logs/compare.log:  same outputs (target, sign, multiset of supports) True
+logs/compare.log:COMPARE DIFFER
+logs/theirs_pr4.log:PR graph h 8 additions 344 outputs 624 roles 968 totals exact True map True 0.1s
+logs/theirs_pr4.log:  frames {1: (0, 57, 8), 2: (0, 57, 8), 3: (0, 57, 8)}
+logs/theirs_pr4.log:PR graph h 10 additions 1116 outputs 1430 roles 2546 totals exact True map True 0.3s
+logs/theirs_pr4.log:  frames {1: (0, 91, 10), 2: (0, 91, 10), 3: (0, 91, 10)}
+logs/theirs_pr4.log:PR graph h 12 additions 2844 outputs 2652 roles 5496 totals exact True map True 0.7s
+logs/theirs_pr4.log:  frames {1: (0, 133, 12), 2: (0, 133, 12), 3: (0, 133, 12)}
+logs/theirs_pr4.log:PR graph h 24 additions 66638 outputs 24312 roles 90950 totals exact True map True 89.4s
+== RUN_ALL: PASS

@@ -1,0 +1,6 @@
+8 rect adds 46 rect outs 428 repaired 8 global 55 pair 140 pair q 448 point 42 C 283 q 884 roles 1167 0.0s
+  map (True, 1400)
+10 rect adds 494 rect outs 2080 repaired 4 global 119 pair 315 pair q 1080 point 72 C 1000 q 3170 roles 4170 0.0s
+  map (True, 6720)
+12 rect adds 2386 rect outs 5888 repaired 0 global 219 pair 594 pair q 2244 point 110 C 3309 q 8144 roles 11453 0.1s
+  map (True, 24420)

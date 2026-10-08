@@ -1,0 +1,6 @@
+pr4 h 8 roles 1167 a ['0b111', '0b1100001', '0b11100000']
+ interstage [(1, True, True), (2, True, True), ('X source = U_a', True, True), ('Y source = 0', True, True), ('X sink = full', True, True), ('Y sink = U_a^perp', True, True)]
+ stage 1: fails 0 residuals 2149 onb-built 490 dec 8 loss 57 sum|d| 598402 (1.3s)
+ stage 2: fails 0 residuals 2793 onb-built 651 dec 8 loss 57 sum|d| 603890 (23.9s)
+ stage 3: fails 0 residuals 2149 onb-built 518 dec 8 loss 57 sum|d| 647794 (583.3s)
+ totals {1: 598402, 2: 603890, 3: 647794}

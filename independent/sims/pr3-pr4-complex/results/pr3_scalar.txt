@@ -1,0 +1,8 @@
+pr3 7 single {'forward': {'target': True, 'source': True, 'scratch': True, 'centers': True}, 'inverse': {'target': True, 'source': True, 'scratch': True, 'centers': True}, 'basis': True} 0.2s
+   three-stage {'exchange': True, 'restored': True} 0.9s
+pr3 8 single {'forward': {'target': True, 'source': True, 'scratch': True, 'centers': True}, 'inverse': {'target': True, 'source': True, 'scratch': True, 'centers': True}, 'basis': True} 0.2s
+   three-stage {'exchange': True, 'restored': True} 2.0s
+pr3 9 single {'forward': {'target': True, 'source': True, 'scratch': True, 'centers': True}, 'inverse': {'target': True, 'source': True, 'scratch': True, 'centers': True}, 'basis': True} 0.3s
+   three-stage {'exchange': True, 'restored': True} 8.3s
+pr3 10 single {'forward': {'target': True, 'source': True, 'scratch': True, 'centers': True}, 'inverse': {'target': True, 'source': True, 'scratch': True, 'centers': True}, 'basis': True} 0.5s
+   three-stage {'exchange': True, 'restored': True} 25.6s

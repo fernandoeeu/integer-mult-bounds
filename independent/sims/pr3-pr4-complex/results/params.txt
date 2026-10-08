@@ -1,0 +1,10 @@
+PR3 {'v': 2300, 'N': 12167000000, 'm': 15625, 'W': 1741801270000, 'L': 10315500000, 's': 27215641140750000, 'eta': Fraction(28, 205789375)}
+  claimed W 1741801270000 L 10315500000 s 27215641140750000 eta 28/205789375: True True True True
+  log m < 966/100: True  eta > 14e-9*9.66: True
+PR4 {'v': 2024, 'N': 8291469824, 'm': 13824, 'W': 3013310215168, 'L': 6796219584, 's': 41655997423981952, 'eta': Fraction(365, 5084246016), 'ell': 553}
+  claimed W 3013310215168 L 6796219584 s 41655997423981952 eta 365/5084246016: True True True True
+  log m < 477/50: True  eta > 750e-11*477/50: True margin 11935523/49650840000000000
+PR4 without stage sharing eta 365/7612379136 4.794821611995969e-08  supports 1-sigma up to ~ 5.026018461211708e-09
+PR3 recurrence {'chi_max': Fraction(12499999963, 12500000000), 'chi_without_max': Fraction(6249999912569, 6250000000000), 'chi_max_equals_tau': True, 'internal_ok': True, 'internal_ok_without_max': True, 'leaf_reserve_ok': True, 'leaf': Fraction(499999993007, 500000000000)}
+PR4 recurrence {'chi_max': Fraction(12499999963, 12500000000), 'chi_without_max': Fraction(49999999625227, 50000000000000), 'chi_max_equals_tau': True, 'internal_ok': True, 'internal_ok_without_max': True, 'leaf_reserve_ok': True, 'leaf': Fraction(399999997003, 400000000000)}
+head recurrence {'chi_max': Fraction(499999999789729, 500000000000000), 'chi_without_max': Fraction(499999999789729, 500000000000000), 'chi_max_equals_tau': False, 'internal_ok': True, 'internal_ok_without_max': True, 'leaf_reserve_ok': True, 'leaf': Fraction(499999999791209, 500000000000000)}

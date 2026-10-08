@@ -1,0 +1,12 @@
+7 adds {'star': 84} outputs 350 roles 434 c+q 434 splits 89 pieces/target {10} 0.0s
+  coeff ok True nnz 560 []
+8 adds {'disj': 94, 'star': 168} outputs 616 roles 878 c+q 878 splits 96 pieces/target {11} 0.0s
+  coeff ok True nnz 1400 []
+9 adds {'disj': 295, 'star': 288} outputs 964 roles 1547 c+q 1547 splits 102 pieces/target {11, 12} 0.0s
+  coeff ok True nnz 3192 []
+10 adds {'disj': 598, 'star': 450} outputs 1420 roles 2468 c+q 2468 splits 108 pieces/target {11, 12} 0.1s
+  coeff ok True nnz 6720 []
+11 adds {'disj': 1134, 'star': 660} outputs 1970 roles 3764 c+q 3764 splits 122 pieces/target {11, 12} 0.1s
+  coeff ok True nnz 13200 []
+12 adds {'disj': 1856, 'star': 924} outputs 2640 roles 5420 c+q 5420 splits 136 pieces/target {12} 0.1s
+  coeff ok True nnz 24420 []

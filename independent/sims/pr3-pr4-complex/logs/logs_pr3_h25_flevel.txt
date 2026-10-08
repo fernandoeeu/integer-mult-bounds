@@ -1,0 +1,11 @@
+h 25 roles 108195
+  stage 1: wires 112821 edges 1100238 distinct residuals 275109 failures 0 decreasing edges 26 loss 650 sum|d| 1691064825 (401.8s)
+  stage 2: wires 112821 edges 1100238 distinct residuals 535214 failures 0 decreasing edges 26 loss 650 sum|d| 1693714425 (428.9s)
+  stage 3: wires 112821 edges 1100238 distinct residuals 535214 failures 0 decreasing edges 26 loss 650 sum|d| 1759954425 (12.8s)
+   1 {((('F',), ('F',)), (('F',), ('0',)), 25): 26}
+   2 {((('F',), ('F',)), (('F',), ('0',)), 25): 26}
+   3 {((('F',), ('F',)), (('F',), ('0',)), 25): 26}
+
+real	14m17.141s
+user	3m57.485s
+sys	0m1.345s

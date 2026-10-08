@@ -1,0 +1,14 @@
+Case B: f=3,K=6,rho=0,G=2 (B=4), earlier source, address is good
+  input             {'x': 1, 'y': 1104, 't': 0, 'b': 0, 'u': 0}
+  expected T(a)     {'x': 1, 'y': 1105, 't': 0, 'b': 0, 'u': 0}
+  radix-B reading   {'x': 1, 'y': 1105, 't': 0, 'b': 0, 'u': 0}
+  2^i reading       {'x': 1, 'y': 1101, 't': 0, 'b': 0, 'u': 0}
+Case C: f=2,K=6,rho=0,G=2, earlier source, S^{-1}(S a) should equal a
+  a                 {'x': 1, 'y': 16, 't': 0, 'b': 0, 'u': 0}
+  S(a)              {'x': 1, 'y': 17, 't': 0, 'b': 0, 'u': 0}
+  stepwise inverse  {'x': 1, 'y': 16, 't': 0, 'b': 0, 'u': 0}
+  final-q inverse   {'x': 1, 'y': 16, 't': 3, 'b': 0, 'u': 0}
+Case U: f=3,K=6,rho=0,G=2, later source, u_0 = B-1 = 3, x_{j_0}=1
+  input             {'x': 1, 'y': 1040, 't': 0, 'b': 0, 'u': 3} (bad as written: u_0 = B-1)
+  expected T(a)     {'x': 1, 'y': 1041, 't': 0, 'b': 0, 'u': 3}
+  actual S(a)       {'x': 1, 'y': 1105, 't': 0, 'b': 0, 'u': 3} -> differs at bit j_1=6; the u clause of the bad set is necessary

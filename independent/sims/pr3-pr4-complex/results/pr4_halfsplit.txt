@@ -1,0 +1,4 @@
+PR4 with an independent half-split rectangle plan (not the PR selection):
+ h 8 roles 1211 repaired 8 map ok True frame failures [0, 0, 0] loss [57, 57, 57]
+ h 10 roles 4298 repaired 24 map ok True frame failures [0, 0, 0] loss [91, 91, 91]
+ h 12 roles 11279 repaired 0 map ok True frame failures [0, 0, 0] loss [133, 133, 133]

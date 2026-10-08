@@ -1,0 +1,7 @@
+pr4 h24 exact map (True, 2819432) 96s
+pr4 h24 single invocation {'forward': {'target': True, 'source': True, 'scratch': True, 'centers': True}, 'inverse': {'target': True, 'source': True, 'scratch': True, 'centers': True}} 152s
+pr3 h25 single invocation {'forward': {'target': True, 'source': True, 'scratch': True, 'centers': True}, 'inverse': {'target': True, 'source': True, 'scratch': True, 'centers': True}} 165s
+
+real	2m45.889s
+user	0m55.749s
+sys	0m0.734s

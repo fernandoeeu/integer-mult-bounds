@@ -1,0 +1,1 @@
+f2 algebra agrees with brute-force enumeration on 400 random subspaces of F_2^7

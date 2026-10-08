@@ -1,0 +1,4 @@
+pr4 8 single {'forward': {'target': True, 'source': True, 'scratch': True, 'centers': True}, 'inverse': {'target': True, 'source': True, 'scratch': True, 'centers': True}, 'basis': True} 0.3s
+   three-stage {'exchange': True, 'restored': True, 'join_values': True} 3.0s
+pr4 10 single {'forward': {'target': True, 'source': True, 'scratch': True, 'centers': True}, 'inverse': {'target': True, 'source': True, 'scratch': True, 'centers': True}, 'basis': True} 0.8s
+   three-stage {'exchange': True, 'restored': True, 'join_values': True} 47.6s

@@ -1,0 +1,1 @@
+PR3 construction at h=24 (PR4 ground size): roles 90806 additions 66518 outputs 24288 eta 7/59732856 ~ 1.1718843646116637e-07

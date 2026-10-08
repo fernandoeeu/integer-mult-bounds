@@ -1,0 +1,8 @@
+negative controls (each must show a rejection or a changed count):
+  pr3_without_injection_rule {'n_fail': 94, 'example': (179, 17, (('F',), ('star', 3, 252)), (('F',), ('tperp', 6)), 'P-part: alternating residual (no norm-one vector)')}
+  pr3_reverse_with_forward_labels {'n_fail': 768, 'example': (121, 4, (('F',), ('line', 52)), (('F',), ('coord', 15)), 'P-part: incomparable')}
+  pr3_flip_coefficient {'map_ok': False, 'example': (0, 52, Fraction(-1, 2), Fraction(1, 2))}
+  pr4_without_repair {'repaired_in_real_build': 8, 'n_fail': 8, 'example': (332, 8, (('F',), ('coord', 241)), (('F',), ('tperp', 21)), 'P-part: alternating residual (no norm-one vector)')}
+  pr4_injection_before_scatter {'n_fail_stage3': 0, 'n_dec_stage3': 64, 'loss_stage3': 449, 'example': None}
+  pr4_odd_h_labels {'h': 9, 'w_gram_is_identity': False, 'pair_root_equals_span_w': False}
+  pr4_flip_scatter {'map_ok': False, 'example': (0, 0, Fraction(0, 1))}

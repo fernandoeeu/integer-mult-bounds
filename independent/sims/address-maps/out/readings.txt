@@ -1,0 +1,19 @@
+== Reading A (primary): radix-B packing, stepwise inverse ==
+  (f=3,K=6,rho=0,G=2) late=False: no failure
+  (f=2,K=6,rho=0,G=2) late=True: no failure
+== Reading B: t-loads packed as sum bit_i 2^i ==
+  (f=2,K=6,rho=0,G=2) late=False: None
+  (f=3,K=5,rho=0,G=1) late=False: None
+  (f=3,K=6,rho=0,G=2) late=False: ('C4 S!=T on good', {'x': 1, 'y': 1104, 't': 0, 'b': 0, 'u': 0})
+   (identical to A when n=1 or G=1, since then 2^i = B^i; must differ for n>=2, G>=2)
+== Reading C: inverse offsets read from the final address q ==
+  (f=2,K=6,rho=0,G=2) late=False: ('C1 inverse', {'x': 1, 'y': 16, 't': 0, 'b': 0, 'u': 0})
+  (f=2,K=6,rho=0,G=2) late=True: ('C1 inverse', {'x': 0, 'y': 16, 't': 0, 'b': 0, 'u': 1})
+== Mutations (each must be detected) ==
+  drop_step4                   (f=2,K=6,rho=0,G=2) late=False: detected: C4 S!=T on good
+  step3_uses_old_t             (f=2,K=6,rho=0,G=2) late=False: detected: C4 S!=T on good
+  no_unload                    (f=2,K=6,rho=0,G=2) late=True: detected: C4 S!=T on good
+  bad set omits t digits       (f=2,K=6,rho=0,G=2) late=False: detected: C2/C3 invariance
+  targeted u-carry case (f=3,K=6,rho=0,G=2) late=True state={'x': 1, 'y': 1040, 't': 0, 'b': 0, 'u': 3}:
+     bad (as written) = True; bad without u clause = False
+     S(y)=1105  T(y)=1041  S==T: False  -> u clause is needed for n>=2 (mutant detected)

@@ -1,0 +1,2 @@
+pr3 h 8 distinct residual pairs 3312 phase identity holds for all x on 3312 12.1s
+pr4 h 8 distinct residual pairs 3623 phase identity holds for all x on 3623 13.2s

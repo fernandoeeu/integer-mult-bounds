@@ -1,0 +1,9 @@
+pi combinatorics h 6 {'bijection': True, 'intersections': [0, 2], 'even': True}
+pi combinatorics h 8 {'bijection': True, 'intersections': [0, 2], 'even': True}
+pi combinatorics h 10 {'bijection': True, 'intersections': [0, 2], 'even': True}
+pi combinatorics h 24 {'bijection': True, 'intersections': [0, 2], 'even': True}
+h6 all pairs 28 ok True 38.9s
+h8 sampled pairs 6 ok True 130.5s
+endpoint frames h 8 aux roles 1167 bad 0
+endpoint frames h 10 aux roles 4170 bad 0
+endpoint frames h 24 aux roles 365760 bad 0
