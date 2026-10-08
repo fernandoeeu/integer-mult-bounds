@@ -1,0 +1,14 @@
+{
+  "name": "imb-independent-ts-checker",
+  "private": true,
+  "type": "module",
+  "description": "Independent TypeScript recomputation of the finite checks behind the conditional 2^-59 and compact-control (83/10^12) witnesses.",
+  "license": "Apache-2.0",
+  "scripts": {
+    "check": "bun src/main.ts",
+    "check:59": "bun src/main.ts --only=59",
+    "check:compact": "bun src/main.ts --only=compact",
+    "compare": "bun src/compare.ts",
+    "test": "bun test"
+  }
+}
