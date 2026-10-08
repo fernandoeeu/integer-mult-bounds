@@ -9,6 +9,8 @@
     "check:59": "bun src/main.ts --only=59",
     "check:compact": "bun src/main.ts --only=compact",
     "compare": "bun src/compare.ts",
-    "test": "bun test"
+    "test": "bun test",
+    "check:prs": "bun src/prs/main.ts",
+    "compare:prs": "bun src/prs/compare.ts"
   }
 }

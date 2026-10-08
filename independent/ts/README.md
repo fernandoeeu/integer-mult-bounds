@@ -79,6 +79,58 @@ FAILED: [compact-control witness (current)] kappa < g3: slack -1/100000000000000
 ...
 ```
 
+## Outside pull requests (7 October 2026)
+
+`bun run check:prs` re-checks the new arithmetic of four outside pull requests
+(PR 1 tuned paired parameters, PR 2 aligned paired circuit, PR 3 compressed
+complex circuit, PR 4 retained complex totals), with one verdict per PR.
+`bun run compare:prs` compares the recomputed values with each PR's certificate
+(copies in `prs/certificates/`). The code is in `src/prs/`, the tests in
+`test/prs/`, and the findings in `prs/REPORT.md`. None of the
+existing checks above is changed by it.
+
+On 8 October 2026 three more entries were added to both commands: PR 4's new
+head (8c225e6, entry `4b`; the earlier head 42a88ef stays pinned as `4`),
+PR 5 (fast Gaussian resampling, d3d370c) and PR 6 (aligned bit circuit with
+cheaper centers, 5015011). Select entries with `--only=1,4b,5`. With
+`PR_CLONE=<clone containing the pinned commits>`, `compare:prs` also recomputes
+PR 4's and PR 4b's `proof_sha256` hashes; without it they are not compared.
+
+Later on 8 October two more entries were added: PR 7 (jacklightChen, F3
+five-subset bit network and paired complex producer, 6725c6a) and PR 8 (Rohan
+Arun, geometric complex-network candidate, 9454645). PR 7 rebuilds the PR's
+global producer at the stated size h = 28 (11240978 additions identified over
+378 local producers, 20475 four-point stars resynthesized): about a minute and
+1.8 GB of memory, once per process. `--observation` adds a second count of
+PR 7's distinct supports by additive fingerprints and rebuilds PR 8's bit
+screen (21 paired circuits). With `PR_CLONE`, `compare:prs` also recomputes
+the source hashes listed in PR 7's and PR 8's certificates. Code:
+`src/prs/pairedTriple.ts`, `primeField.ts`, `pr7.ts`, `geometric.ts`,
+`pr8.ts`; tests: `test/prs/pr78-fast.test.ts`, `pr78-heavy.test.ts`.
+
+Entries 9 to 13 (8 October, later): PR 9 (Rohan Arun, refined star templates,
+cfd6a2b), PR 10 (icekylinx, batched recursive networks, 62691e3), PR 11 (Rohan
+Arun, dimension screen and matching, a97c1ba; no new exponent), PR 12 (Rohan
+Arun, h = 30 with controlled batching, 35d31e3) and PR 13 (eumemic, auxiliary
+source frames, 3ef246f). PR 9 re-synthesizes PR 7's 365 star templates and so
+reuses entry 7's global build (run alone, `--only=9` builds it once). The
+batched entries recompute the mixed-width rank moments, the bulk depth guard
+and the 29-row parameter table; the recurrence lemmas behind them are analytic
+and are printed as observations. Code: `src/prs/batched.ts`, `starRules.ts`,
+`pr9.ts` to `pr13.ts`; tests: `test/prs/pr913-fast.test.ts`.
+
+Entries 14 to 16 (8 October, later): PR 14 (Rohan Arun, source frames with
+h = 30 data-corner blocks, 1fa5b9a; its held-back controlled-corners candidate
+is checked as section 14-E), PR 15 (eumemic, a smaller h = 30 producer with
+source frames and every complex residual batched, a17cab3) and PR 16
+(jacklightChen, a nested controlled basis at h = 32 with every complex residual
+batched, a80f5e6). The h = 30 and h = 32 producer counts are taken as stated
+(not rebuilt); each entry prints the role slack that leaves. PR 15's complex
+rank histogram is stated only in its certificate and is used as an input
+there; PR 16's is rebuilt from its note. The cross-PR rows (X3) compare the
+two histograms. Code: `src/prs/allResiduals.ts`, `pr14.ts` to `pr16.ts`;
+tests: `test/prs/pr1416-fast.test.ts`.
+
 ## The current witness, top-down
 
 ```
